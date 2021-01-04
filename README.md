@@ -2,3 +2,5 @@
 
 - [git](git)
 
+- [staticweb](staticweb)
+
