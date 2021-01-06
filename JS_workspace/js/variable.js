@@ -6,7 +6,7 @@ x =6; //따로 변수 선언을 하지 않아도 성립된다 -> 유연함
 const constVariable=10; //const 선언 할 시 값이 변경이 안된다. -> 상수일때 사용
 let globalVariable=5;   // 전역변수
 {
-    let localVariable =5; //지역변수
+    let localVariable =5; //지역변수 
     var y=5;
     console.log("localVariable ", localVariable);
     console.log("localVariable ", globalVariable);
