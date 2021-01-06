@@ -9,7 +9,7 @@ console.log("add(10,20) = ",add(10,20));
 //함수정의
 function add(x,y){
     return x+y;
-}
+} 
 
 //함수사용
 let sum = add(10,20);
