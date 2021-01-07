@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf8">   <!-- 한글 깨짐 방지용-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">  
+        </Script>
+    </head>
+    <body>
+        <h1> jquery Example </h1>
+        <a href="http://jquery.com/">jQuery</a>
+        <button id="alertButton">Alert!</button>
+        <script>
+            $( document ).ready(function() {
+               $("#alertButton").on("click", function(){
+                   alert("Button Clicked...");
+               })
+                $( "a" ).click(function( event ) {
+                    alert( "The link will no longer take you to jquery.com" );
+                    event.preventDefault(); // 2가지 기능이 있을때 한가지 기능만 하고 실행을 중단한다.
+                })
+            });
+        </script>
+    </body>
+</html>
