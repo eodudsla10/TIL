@@ -4,7 +4,7 @@ let todoInputHandler = function() {
     //todoNum 계산
     if (todos.length != 0) {
         const result = todos.map(todo => todo.todoNum);
-        maxTodoNum = Math.max(...result); //Math.max.apply(null, result)
+        maxTodoNum = Math.max(...result); //Math.max.apply(null, result) 
     }
     //입력한 title 읽기
     const addTitle = document.getElementById("todoInput").value;
