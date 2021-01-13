@@ -57,6 +57,23 @@ for tdata in tuple_data:
 print()
 for ldata in list_data:
     print(ldata, end=" ")
-
+print()
 list_data[0]=100
 # tuple_data[0]=100 //TypeError : 값을 변경할 수 없다 .
+# tuple : function에서 다수의 데이터 리턴시 사용
+def test_tuple():
+    return(10,20)
+
+a,b = test_tuple()
+print("{0} + {1} + {2}".format(a,b,a+b) )
+
+#람다 : lamda argumentlist:return   - 1회성 익명함수 ->1회성으로 사용할 때 굳이 함수로 정의하기 보단 간단하게 람다식으로 정의해서 사용
+list_input =[1,2,3,4,5]
+output_list = map(lambda data:data*data,list_input)
+print(list_input)
+print(output_list)
+print(list(output_list))
+output_filter = filter(lambda data: data<3, list_input)
+print(list_input)
+print(output_filter)
+print(list(output_filter))
