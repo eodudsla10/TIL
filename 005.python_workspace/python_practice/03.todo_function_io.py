@@ -52,7 +52,7 @@ def message_display(message):
 
 #프로그램 종료시 list students "students.dat" 파일 저장
 def save_list():
-    save_file = open("students.dat", "w")
+    save_file = open("todos.dat", "w")
     for index, todolist in enumerate(todo):
         save_file.write("{0}번째 |{1}\n ".format(index,todolist["title"]))
 
