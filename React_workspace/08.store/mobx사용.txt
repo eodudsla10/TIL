@@ -1,0 +1,49 @@
+1. store 클래스 선언 : observerable 할 state 데이터 관리 클래스
+예) 
+import Books from "../Books";
+import {makeObservable, observable, action} from 'mobx';
+class BookStore  {
+  //observer 컴포넌트에서 observable 데이터 변경시 re-render할 state데이터 선언
+    @observable books = Books;  //book목록 초기화  
+    @observable book =Books[0]; //book 초기화
+
+    constructor() {
+        makeObservable(this)
+    }
+   
+  //observer하고 있는 컴포넌트의 event를 통해 호출 - observable 데이터 상태값 변경
+    @action
+    bookSelect =(book)=>{
+        this.book = book;
+    } 
+ //@computed  - state 값을 계산해서 리턴 
+ 
+}
+export default new BookStore();   //SingleTon Object
+
+
+2. observer 컴포넌트 
+@observer
+예)
+@observer
+class App extends Component {
+ ...
+}
+
+3.observer 컴포넌트와 observable state를 정의한 store 객체 연결
+3.1  store객체 Povider
+index.js
+<Provider BookStore={BookStore}>
+    <App />
+ </Provider>
+
+3.2 observer에서 store객체 생성 참조
+예)
+@inject("BookStore")
+@observer
+class BookDetail extends Component {
+...
+}
+
+
+
