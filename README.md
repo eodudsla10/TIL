@@ -1,8 +1,6 @@
 # Today I Learned
 
-- [git](git)
-- [staticweb](staticweb)
-- [JS_workspace](JS_workspace)
+교육 : 멀티캠퍼스 (K-Digital 핵심 인재)
 
-- [Python_workspace](Python_workspace)
+기간 : 2021년 12월 28일 ~ 2021년 6월 4일
 
